@@ -5,17 +5,22 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-Add a short welcome message or introduction here. Aim to get the viewer interested in what follows! Guideline: 1 or 2 sentences. 
-
-I am adding a test sentence here at 13:24 on 03/12/24.
+This is the charmander pixelart that is made in verilog code that is displayed using a vga cable. It was made over 5 weeks where I started with color strips and learnt how to display an individual pixel to create pixel art.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSum.png">
+The project setup was firstly made in the C temp file due to having errors when writing bitstream when the project is in onedrive. Using the Intellectual Property Wizard we generated a 25MHz clock speed from the already existing 100MHz clock from the board. In addition to the color strips code I tested with, I added a Basys3 master constraint file to tie all files together.
+
+<img src="https://raw.githubusercontent.com/Eoin1955/fpga-vga-verilog/main/docs/assets/images/projectsummary.png">
+
 ### **Template Code**
 Outline the structure and design of the Verilog code templates you were given. What do they do? Include reference to how a VGA interface works. Guideline: 2/3 short paragraphs, consider including screenshot(s).
+
+For the Structure we got was VGATop design source with vga sync, colour strips and where we added the clock wizard. Then the Basys3 master constraint file was added this brought all files togther. The testbench that includes VGASync and colour stripes.
+
+ColourStripes is the file that I changed to make my pixel art, it uses the 100MHz clock from the board, 10 wide bus input from row and col to then output a red, green and blue 
+
 ### **Simulation**
 Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
 ### **Synthesis**
